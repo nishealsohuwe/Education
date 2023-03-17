@@ -7,6 +7,7 @@ namespace Task_1
         static void Main(string[] args)
         {
             int goldInWallet;
+            int crystellsInWallet = 0;
             Console.WriteLine("Добро пожаловать в мой магазин! Скользо золота в вашем кошельке?");
             goldInWallet = Convert.ToInt32(Console.ReadLine());
             int priceOfCrystall = 5;
@@ -16,13 +17,13 @@ namespace Task_1
             {
                 Console.WriteLine($"Прекрасно, вот ваши {crystallsToBuy} кристаллы. Хорошего дня)");
                 goldInWallet -= crystallsToBuy * priceOfCrystall;
+                crystallsInWallet += crystallsToBuy;
             }
             else
             {
                 Console.WriteLine("Похоже, у вас не хватает золота на эту покупку, приходите в следующий раз.");
-                crystallsToBuy = 0;
             }
-            Console.WriteLine($"Вы выходите из магазина и заглядываете в свою сумку. Там вы видите {crystallsToBuy} кристаллов и {goldInWallet} золота.");
+            Console.WriteLine($"Вы выходите из магазина и заглядываете в свою сумку. Там вы видите {crystallsInWallet} кристаллов и {goldInWallet} золота.");
 
             Console.ReadKey();
         }
