@@ -1,0 +1,20 @@
+using System;
+
+namespace Task_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int minutesToOnePeople = 10;
+            Console.WriteLine("Вы приходите вполиклинику и видите оргомную очередь. Первым делом вы решаете посчитать коичество человек в очереди. Сколько человек вы видите?");
+            int peoplesInQueue = Convert.ToInt32(Console.ReadLine());
+            int minutesToWait = minutesToOnePeople * peoplesInQueue;
+            int minutesInHour = 60;
+            int hoursInQueue = minutesToWait / minutesInHour;
+            int minutesInQueue = minutesToWait % minutesInHour;
+            Console.WriteLine($"Вы простоите в очереди {hoursInQueue} часов {minutesInQueue} минут.");
+            Console.ReadKey();
+        }
+    }
+}
