@@ -9,7 +9,7 @@ namespace Task_1
             int photosInAlbum = 52;
             int photosInRow = 3;
 
-            int totalRowsWithPhotos = photosInAlbum / photosInRow;
+            int filledRows = photosInAlbum / photosInRow;
             int remainingPhotos = photosInAlbum % photosInRow;
 
             Console.WriteLine("Целых рядов в альбоме: " + totalRows);
