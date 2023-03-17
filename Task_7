@@ -1,0 +1,30 @@
+using System;
+
+namespace Task_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int goldInWallet;
+            Console.WriteLine("Добро пожаловать в мой магазин! Скользо золота в вашем кошельке?");
+            goldInWallet = Convert.ToInt32(Console.ReadLine());
+            int priceOfCrystall = 5;
+            Console.WriteLine($"Отлично! Один кристалл стоит {priceOfCrystall} золота. Сколько вы хотите приобрести?");
+            int crystallsToBuy = Convert.ToInt32(Console.ReadLine());
+            if (crystallsToBuy * priceOfCrystall <= goldInWallet)
+            {
+                Console.WriteLine($"Прекрасно, вот ваши {crystallsToBuy} кристаллы. Хорошего дня)");
+                goldInWallet -= crystallsToBuy * priceOfCrystall;
+            }
+            else
+            {
+                Console.WriteLine("Похоже, у вас не хватает золота на эту покупку, приходите в следующий раз.");
+                crystallsToBuy = 0;
+            }
+            Console.WriteLine($"Вы выходите из магазина и заглядываете в свою сумку. Там вы видите {crystallsToBuy} кристаллов и {goldInWallet} золота.");
+
+            Console.ReadKey();
+        }
+    }
+}
