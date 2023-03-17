@@ -12,7 +12,7 @@ namespace Task_1
             int filledRows = photosInAlbum / photosInRow;
             int remainingPhotos = photosInAlbum % photosInRow;
 
-            Console.WriteLine("Целых рядов в альбоме: " + totalRows);
+            Console.WriteLine("Целых рядов в альбоме: " + filledRows);
             Console.WriteLine("Фотографий сверх меры: " + remainingPhotos);
         }
     }
